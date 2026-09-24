@@ -1,0 +1,14 @@
+{
+  "name": "msw-clean-memory-reproduction",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "dependencies": {
+    "@mswjs/interceptors": "0.41.9",
+    "msw": "2.15.0"
+  },
+  "scripts": {
+    "test": "node --expose-gc repro.mjs msw fetch-reset",
+    "control": "node --expose-gc repro.mjs none fetch-reset"
+  }
+}
